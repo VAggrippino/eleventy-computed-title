@@ -1,0 +1,18 @@
+---
+layout: base.njk
+title: Posts from a specific month
+pagination:
+    data: collections.contentByMonth
+    size: 1
+    alias: month
+permalink: "{{ month }}/index.html"
+eleventyComputed:
+    title: "Posts from {{ month }}"
+---
+
+<h1>Title: {{ title }}</h1>
+{% for post in collections.contentByMonth[month] %}
+    <article>
+        {{ post.content | safe }}
+    </article>
+{% endfor %}
