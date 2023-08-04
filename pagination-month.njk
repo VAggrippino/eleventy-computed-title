@@ -1,17 +1,19 @@
----
-layout: base.njk
-tags:
-    - posts
-    - months
-pagination:
-    data: collections.contentByMonth
-    size: 1
-    alias: month
-    addAllPagesToCollections: true
-permalink: "{{ month }}/index.html"
-eleventyComputed:
-    title: "Posts from {{ month }}"
-    nottitle: "(Not Title) Posts from {{ month }}"
+---json
+{
+    "layout": "base.njk",
+    "tags": ["posts", "months"],
+    "pagination": {
+        "data": "collections.contentByMonth",
+        "size": 1,
+        "alias": "month",
+        "addAllPagesToCollections": true
+    },
+    "permalink": "{{ month }}/index.html",
+    "eleventyComputed": {
+        "title": "Posts from {{ month }}",
+        "nottitle": "(Not Title) Posts from {{ month }}"
+    }
+}
 ---
 
 <h1>Title: {{ title }}</h1>
