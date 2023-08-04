@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+<h2>Month Pages (title):</h2>
+<ul>
+    {% for month in collections.months %}
+        <li><a href="{{ month.page.url }}">{{ month.data.title }}</a></li>
+    {% endfor %}
+</ul>
+
+<h2>Month Pages (not title):</h2>
+<ul>
+    {% for month in collections.months %}
+        <li><a href="{{ month.page.url }}">{{ month.data.nottitle }}</a></li>
+    {% endfor %}
+</ul>
