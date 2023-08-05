@@ -14,3 +14,10 @@ layout: base.njk
         <li><a href="{{ month.page.url }}">{{ month.data.nottitle }}</a></li>
     {% endfor %}
 </ul>
+
+<h2>Posts:</h2>
+<ul>
+    {% for post in collections.posts %}
+        <li><a href="{{ post.page.url }}">{{ post.data.title }}</a></li>
+    {% endfor %}
+</ul>
