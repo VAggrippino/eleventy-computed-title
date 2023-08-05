@@ -15,7 +15,7 @@ eleventyComputed:
 ---
 
 <h1>Title: {{ title }}</h1>
-<h1>Not Title: {{ nottittle }}</h1>
+<h1>Not Title: {{ nottitle }}</h1>
 {% for post in collections.contentByMonth[month] %}
     <article>
         {{ post.content | safe }}
