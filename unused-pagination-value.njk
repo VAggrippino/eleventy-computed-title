@@ -1,0 +1,17 @@
+---
+layout: base.njk
+tags:
+    - posts
+pagination:
+    data: collections.contentByMonth
+    size: 1
+    alias: month
+    addAllPagesToCollections: true
+eleventyComputed:
+    title: "Unused Pagination Title"
+    nottitle: "The nottitle has been set too"
+---
+<h1>Unused Pagination Value Title: {{ title }}</h1>
+<h1>Unused Pagination Value Not Title: {{ nottitle }}</h1>
+
+<p>This page demonstrates the same problem even though no pagination values are used in <code>eleventyComputed</code> or the page content.</p>
